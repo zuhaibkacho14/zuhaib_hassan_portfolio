@@ -1,0 +1,72 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --burgundy-950: #120409;
+    --burgundy-900: #1b0710;
+    --burgundy-800: #290a18;
+    --burgundy-700: #3f1025;
+    --burgundy-600: #5c1434;
+    --accent-amber: #f59e0b;
+    --accent-gold: #fbbf24;
+    --accent-rose: #f43f5e;
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    background-color: var(--burgundy-950);
+    color: #f5f5f4;
+  }
+}
+
+.font-display {
+  font-family: 'Outfit', sans-serif;
+}
+
+.font-body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.font-mono-code {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* Custom cinematic glow and lighting utilities */
+.cinematic-glow {
+  box-shadow: 0 0 60px -15px rgba(225, 29, 72, 0.3), 0 0 100px -25px rgba(245, 158, 11, 0.15);
+}
+
+.portrait-glow {
+  filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.8)) drop-shadow(0 0 50px rgba(136, 19, 55, 0.35));
+}
+
+.text-glow {
+  text-shadow: 0 0 30px rgba(244, 63, 94, 0.4), 0 0 60px rgba(251, 191, 36, 0.2);
+}
+
+/* Film grain subtle overlay */
+.film-grain {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.035'/%3E%3C/svg%3E");
+}
+
+/* Anamorphic lens flare line */
+.lens-flare-streak {
+  background: linear-gradient(90deg, transparent 0%, rgba(251, 191, 36, 0.15) 25%, rgba(244, 63, 94, 0.8) 50%, rgba(251, 191, 36, 0.15) 75%, transparent 100%);
+  filter: blur(1px);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #14040b;
+}
+::-webkit-scrollbar-thumb {
+  background: #3c0d23;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #5a1435;
+}
